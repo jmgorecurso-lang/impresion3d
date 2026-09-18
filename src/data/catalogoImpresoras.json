@@ -1,0 +1,13 @@
+[
+  { "modelo": "Bambu Lab A1", "marca": "Bambu Lab", "proceso": "Filamento", "subtipo": "Cartesiana" },
+  { "modelo": "Elegoo Neptune 4", "marca": "Elegoo", "proceso": "Filamento", "subtipo": "Cartesiana" },
+  { "modelo": "Creality K2 SE", "marca": "Creality", "proceso": "Filamento", "subtipo": "CoreXY" },
+  { "modelo": "Sovol SV08", "marca": "Sovol", "proceso": "Filamento", "subtipo": "CoreXY" },
+  { "modelo": "FLSUN T1", "marca": "FLSUN", "proceso": "Filamento", "subtipo": "Delta" },
+  { "modelo": "Snapmaker J1", "marca": "Snapmaker", "proceso": "Filamento", "subtipo": "IDEX" },
+  { "modelo": "Elegoo Mars 4", "marca": "Elegoo", "proceso": "Resina", "subtipo": "MSLA / LCD" },
+  { "modelo": "Anycubic Photon Mono X", "marca": "Anycubic", "proceso": "Resina", "subtipo": "MSLA / LCD" },
+  { "modelo": "Prusa SL1S", "marca": "Prusa", "proceso": "Resina", "subtipo": "SLA" },
+  { "modelo": "Formlabs Form 3L", "marca": "Formlabs", "proceso": "Otros", "subtipo": "SLS" },
+  { "modelo": "HP Jet Fusion", "marca": "HP", "proceso": "Otros", "subtipo": "SLS" }
+]

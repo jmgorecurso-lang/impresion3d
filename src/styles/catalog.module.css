@@ -1,0 +1,58 @@
+.contenedor {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.botonVolver {
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.subtitulo {
+  font-style: italic;
+  color: #c0bdbd;
+}
+
+.fichaTecnica {
+  background-color: #535354;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 5px solid #282c34;
+}
+.pregunta {
+  display: flex;
+  color: rgb(169, 205, 246);
+  font-size: 1.3em;
+  font-family:cursive;
+  justify-content: left;
+  
+}
+.fichaTecnica p {
+  color: white;
+}
+.fichaTecnica h2 {
+  margin-top: 0;
+}
+
+.ventaja {
+  color: green;
+}
+
+.desventaja {
+  color: crimson;
+}
+
+.bloqueColumnas {
+  display: flex;
+  gap: 3rem;
+}
+
+.columna {
+  flex: 1;
+}
+
+.listaItems {
+  line-height: 1.8;
+}
