@@ -1,18 +1,19 @@
-import '../styles/navbar.css';
-
-export default function Navbar({ setVistaActual }) {
+// no se hace un import de CSS dentro de este archivo, ya está todo en el global.
+import logo from '../assets/Imagenes/logoFondClaro.png';
+function Navbar({setVistaActual}) {
   return (
     <nav className="navbar">
-      <div className="navbar-logo" onClick={() => setVistaActual('inicio')}>
-        🖨️ 3DPrintZone
-      </div>
+      <div className='navbar-logo' onClick={() =>setVistaActual}>
+        <img src={logo} alt="logo" style={{ width: '250px' }} />
+        </div>
+      
 
       <ul className="navbar-menu">
-        <li onClick={() => setVistaActual('tipos')}>Tipos de impresión</li>
+        <li onClick={() => setVistaActual('inicio')}>Tipo de Impresión</li>
         <li onClick={() => setVistaActual('impresoras')}>Impresoras</li>
         <li onClick={() => setVistaActual('materiales')}>Materiales</li>
         <li onClick={() => setVistaActual('configuraciones')}>Configuraciones</li>
-        <li>Posts</li>
+        <li className='navbar-item-deshabilitado'>Post</li>
       </ul>
 
       <div className="navbar-acciones">
@@ -22,3 +23,5 @@ export default function Navbar({ setVistaActual }) {
     </nav>
   );
 }
+
+export default Navbar;
