@@ -1,4 +1,5 @@
 /* ===== Variables globales ===== */
+/* ===== Modo Dia ==== */
 :root {
   --color-primario: #2f6feb;
   --color-primario-oscuro: #2557c7;
@@ -8,22 +9,67 @@
   --color-superficie: #f5f5f5;
   --color-borde: #e2e8f0;
   --color-fondo: #f8fafc;
+  --color-titulo1:#0f172a;
+  --color-titulo2:#2f6feb;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 }
 
+[data-theme='dark'] {
+  --color-primario: #0982c6;
+  --color-primario-oscuro: #7ca4f2;
+  --color-subtitulo: #37d298;
+  --color-texto: #f1f5f9;
+  --color-texto-secundario: #25bdd7;
+  --color-texto-sobre-primario: #eaedf3;
+  --color-superficie: #0b0f19;
+  --color-borde: #334155;
+  --color-fondo: #111827;
+  --color-titulo1:#f1f5f9;
+  --color-titulo2:#2f6feb;
+}
+
+.navbar,
+.hero-badge,
+.hero-buscador,
+.hero-buscador input,
+.chip,
+.tecnologia-tarjeta,
+.hero-resultado-item {
+  transition: background-color 0.65s ease, color 0.55s ease,
+    border-color 0.85s ease;
+}
 /* ===== Reset base ===== */
 * {
   box-sizing: border-box;
+}
+.app-shell {
+  min-height: 100vh;
+  background: var(--color-fondo);
+  transition: background-color 0.65s ease;
 }
 
 body {
   margin: 0;
   font: 16px/1.5 var(--sans);
   color: var(--color-texto);
+  background-color: var(--color-superficie);
   background: var(--color-fondo);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.8s ease, color 0.2s ease;
+}
+.btn-tema {
+  border: 1px solid var(--color-borde);
+  background: var(--color-superficie);
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 h1, h2, h3 {
@@ -47,10 +93,18 @@ p {
 }
 
 .navbar-logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: var(--color-texto);
+  display: flex;
+  font-size: large;
+   
+}
+.logoPrint {
+  color: var(--color-titulo1);
+}
+.logoLab {
+  color: var(--color-titulo2);
+}
+.navbar-logo img {
+  height: 70px;;
 }
 
 .navbar-menu {
@@ -118,6 +172,8 @@ p {
   margin: 0 auto;
   padding: 4rem 1.5rem 3rem;
   text-align: center;
+  background-color: var(--color-superficie);
+  
 }
 
 .hero-badge {
@@ -258,6 +314,7 @@ p {
   font-size: 0.9rem;
   color: var(--color-texto-secundario);
   margin-top: 0.4rem;
+   background-color: var(--color-superficie);
 }
 
 .tecnologias-grid {
@@ -282,6 +339,8 @@ p {
   max-width: 1126px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
+   background-color: var(--color-superficie);
+   color: var(--color-titulo1);
   }
 
   .printers-filtros {
@@ -301,14 +360,44 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.25rem;
 }
-
 .printer-tarjeta {
-  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
   background: var(--color-superficie);
   border: 1px solid var(--color-borde);
   border-radius: 14px;
-  padding: 1.25rem;
+  padding: 1rem;
   text-align: left;
+  color: var(--color-subtitulo);
+}
+
+.printer-imagen {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  /* background: var(--color-fondo); */
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.printer-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.printer-imagen-placeholder {
+  font-size: 1.6rem;
+}
+
+.printer-info {
+  flex: 1;
+  min-width: 0;
 }
 
 .prin-proceso-badge {
